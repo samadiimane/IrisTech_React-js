@@ -34,7 +34,7 @@ class TopNavigation extends Component {
             <Fragment>
 
                 <Navbar className={this.state.navBarBack + " px-3"} collapseOnSelect fixed="top" expand="lg" variant="dark">
-                    <Navbar.Brand className={this.state.navBarTitle} href="#home"> <img src={this.state.navBarLogo} /> </Navbar.Brand>
+                    <Navbar.Brand className={this.state.navBarTitle} href="#home"> <img src={this.state.navBarLogo} alt=''/> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="m-auto">
