@@ -13,7 +13,7 @@ class TopBanner extends Component {
                             <Container className="topContent">
                                 <Row>
                                     <Col className="text-center">
-                                        <h1 className="topTitle">Iris Tech</h1>
+                                        <h1 className="topTitle">Adnane tabi3 lqira2a</h1>
                                         <h4 className="topSubTitle">Where Vision Meets Technology</h4>
                                         <Button variant="primary">Learn More</Button>
 

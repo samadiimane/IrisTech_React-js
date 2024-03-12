@@ -7,6 +7,8 @@ import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faLaptop } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 class Summary extends Component {
     render() {
@@ -22,21 +24,45 @@ class Summary extends Component {
                                     <Row className="countSection">
                                         <Col>
                                             <FontAwesomeIcon className="iconProject" icon={faGlobe} />
-                                            <h1 className="countNumber">35000 </h1>
+                                            <h1 className="countNumber">
+
+                                                <CountUp start={0} end={35000}>
+                                                    {({ countUpRef, start }) => (
+                                                        <VisibilitySensor onChange={start} delayedCall>
+                                                            <span ref={countUpRef} />
+                                                        </VisibilitySensor>
+                                                    )}
+                                                </CountUp>
+                                            </h1>
                                             <h4 className="countTitle">Students Worldwide</h4>
                                             <div className='bottomwhite'></div>
                                         </Col>
 
                                         <Col>
                                             <FontAwesomeIcon className="iconProject" icon={faLaptop} />
-                                            <h1 className="countNumber">22 </h1>
+                                            <h1 className="countNumber">
+                                                <CountUp start={0} end={22}>
+                                                    {({ countUpRef, start }) => (
+                                                        <VisibilitySensor onChange={start} delayedCall>
+                                                            <span ref={countUpRef} />
+                                                        </VisibilitySensor>
+                                                    )}
+                                                </CountUp>
+                                            </h1>
                                             <h4 className="countTitle">Courses Published</h4>
                                             <div className='bottomwhite'></div>
                                         </Col>
 
                                         <Col>
                                             <FontAwesomeIcon className="iconProject" icon={faStar} />
-                                            <h1 className="countNumber">3000 </h1>
+                                            <h1 className="countNumber">
+                                                <CountUp start={0} end={3000}>
+                                                    {({ countUpRef, start }) => (
+                                                        <VisibilitySensor onChange={start} delayedCall>
+                                                            <span ref={countUpRef} />
+                                                        </VisibilitySensor>
+                                                    )}
+                                                </CountUp>   </h1>
                                             <h4 className="countTitle">Student Reviews</h4>
                                             <div className='bottomwhite'></div>
                                         </Col>
@@ -47,15 +73,15 @@ class Summary extends Component {
 
                                 <Col lg={4} md={6} sm={12}>
 
-                                    <Card className="workCard" >
+                                    <Card className="workCard">
 
                                         <Card.Body>
                                             <Card.Title className="cardTitle">What I Have Achieved</Card.Title>
                                             <Card.Text>
-                                                <p className="cardSubTitle text-justify"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Requirment Gathering </p>
-                                                <p className="cardSubTitle text-justify"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> System Analysis </p>
-                                                <p className="cardSubTitle text-justify"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Coding Testing </p>
-                                                <p className="cardSubTitle text-justify"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Implementation </p>
+                                                <p className="cardSubTitle text-start"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Requirment Gathering </p>
+                                                <p className="cardSubTitle text-start"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> System Analysis </p>
+                                                <p className="cardSubTitle text-start"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Coding Testing </p>
+                                                <p className="cardSubTitle text-start"><FontAwesomeIcon className="iconBullent" icon={faCheckSquare} /> Implementation </p>
                                             </Card.Text>
 
                                         </Card.Body>
