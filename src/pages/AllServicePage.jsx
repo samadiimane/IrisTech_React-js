@@ -6,15 +6,18 @@ import Services from '../components/Services/Services'
 import TopNavigation from '../components/TopNavigation/TopNavigation'
 
 class AllServicePage extends Component {
+     componentDidMount() {
+          window.scroll(0, 0)
+     }
      render() {
           return (
-             <Fragment>
-                  <TopNavigation/>
-                  <PageTop pagetitle="Our Services" />
-                  <Services />
-                  <ContactSec />
-                  <Footer />
-             </Fragment>
+               <Fragment>
+                    <TopNavigation title="Our Services" />
+                    <PageTop pagetitle="Our Services" />
+                    <Services />
+                    <ContactSec />
+                    <Footer />
+               </Fragment>
           )
      }
 }
